@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Smythe", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imag {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header__img {
+  max-width: 100%;
+}
+
+.info {
+  position: absolute;
+  top: 50%;
+  left: 20px; /* Adjust this value as needed */
+  transform: translateY(-50%);
+  color: #ffffff;
+  letter-spacing: 1.5px;
+}
+
+.info h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.info p {
+  font-size: 1rem;
+  margin-top: 0.5em;
+}
+.product__info {
+  display: flex;
+}
+.frist__section {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding: 1em 0;
+}
+.price__info {
+  color: #8b8b8b;
+}
+.about {
+  padding-left: 1em;
+}
+a {
+  text-decoration: none;
+  font-size: 4rem;
+  border-radius: 100%;
+  padding: 1rem;
+  color: #8b8b8b;
+}
+a:hover {
+  cursor: pointer;
+  color: black;
+}
+hr {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #8b8b8b;
+}
+.title {
+  width: 100%;
+  text-align: center;
+}
+.orders {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+button {
+  margin-top: 1em;
+  padding: 1em;
+  width: 100%;
+  margin-bottom: 2em;
+  border: none;
+  color: #ffffff;
+  background-color: #16db99;
+}
+button .order_button:hover {
+  background-color: #59f7c2;
+}
+.btn {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.hidden {
+  display: none;
+}
+.form {
+  width: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background-color: #f3f3f3;
+  padding: 5rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+input {
+  width: 100%;
+  padding: 1em;
+  margin-top: 1em;
+  border-color: #d6cccc;
+}
+.card {
+  text-align: center;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.order {
+  display: none;
+}
+.product-item {
+  display: flex;
+  justify-content: space-between;
+}
+.Total {
+  display: flex;
+  justify-content: space-between;
+}
+.btn--close-modal {
+  position: absolute;
+  bottom: 7rem;
+  left: 16rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}

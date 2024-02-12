@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile resturant</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+      rel="stylesheet" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container" id="order-card">
+      <header class="header">
+        <div class="imag">
+          <img class="header__img" src="img/bg img.png" alt=" img" />
+          <div class="info">
+            <h1>Jimmy’s Diner</h1>
+            <p>The best burgers and pizzas in town.</p>
+          </div>
+        </div>
+      </header>
+      <main class="main__container">
+        <section class="frist__section">
+          <div class="product__info">
+            <div class="img">
+              <img src="img/item graphic.png" alt="" />
+            </div>
+            <div class="about">
+              <h2>Pizza</h2>
+              <p class="price__info">pepperoni,mushrom,mozarella</p>
+              <h3>$14</h3>
+            </div>
+          </div>
+          <div class="icon">
+            <a href="#">+</a>
+          </div>
+        </section>
+        <hr />
+
+        <section class="frist__section">
+          <div class="product__info">
+            <div class="img">
+              <img src="img/item graphic (1).png" alt="" />
+            </div>
+            <div class="about">
+              <h2>Hamburger</h2>
+              <p class="price__info">beef, cheese, lettuce/p></p>
+              <h3>$12</h3>
+            </div>
+          </div>
+          <div class="icon">
+            <a href="">+</a>
+          </div>
+        </section>
+
+        <hr />
+
+        <section class="frist__section">
+          <div class="product__info">
+            <div class="img">
+              <img src="img/item graphic (2).png" alt="" />
+            </div>
+            <div class="about">
+              <h2>Beer</h2>
+              <p class="price__info">grain, hops, yeast, water</p>
+              <h3>$12</h3>
+            </div>
+          </div>
+          <div class="icon">
+            <a href="#">+</a>
+          </div>
+        </section>
+
+        <section class="order hidden-order">
+          <div class="orders">
+            <div class="title">
+              <h1>Your order</h1>
+            </div>
+            <div class="product"></div>
+
+            <div class="product--prices"></div>
+          </div>
+          <hr />
+          <div class="btn totalPrice">
+            <div class="Total">
+              <h2>Total price</h2>
+              <h3 class="total-price"></h3>
+            </div>
+            <button class="orders_button open">Complete Your order</button>
+          </div>
+        </section>
+      </main>
+      <div class="overlay hidden"></div>
+    </div>
+    <section class="form hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="card">Enter card details</h2>
+      <input type="text" placeholder="Enter your name" required />
+      <br />
+      <input type="text" placeholder="Enter your card number " required />
+      <br />
+      <input type="text" placeholder="Enter your CVV" required />
+      <button class="order_button submit">Pay</button>
+
+      <script src="script.js"></script>
+    </section>
+  </body>
+</html>
