@@ -12,8 +12,8 @@ const closeModalBtn = document.querySelector(".btn--close-modal");
 
 openForm.addEventListener("click", function () {
   overlay.classList.remove("hidden");
-  hidePrice.classList.add("hidden");
-  price.classList.add("hidden");
+  // hidePrice.classList.add("hidden");
+  // price.classList.add("hidden");
   form.classList.remove("hidden");
 });
 
@@ -21,27 +21,36 @@ const close = document.querySelector(".btn--close-modal ");
 close.addEventListener("click", function () {
   form.classList.add("hidden");
   overlay.classList.add("hidden");
-  resetOrder(); // Clear all data and reset functionality
+  // Clear all data and reset functionality
 });
 
-document
-  .querySelector(".order_button")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    var nameField = document.querySelector(
-      'input[placeholder="Enter your name"]'
-    );
-    var name = nameField.value;
-    if (name) {
-      alert("Payment made by " + name);
+document.getElementById("payButton").addEventListener("click", function () {
+  var name = document.getElementById("name").value;
+  var message = name + "  You have successfully paid!";
+  var lastModel = document.getElementById("lastModel");
+  lastModel.textContent = message;
+  lastModel.style.display = "block";
+  form.classList.add("hidden");
+  overlay.classList.add("hidden");
+  // Clear all data and reset functionality
+  totalPrice = 0;
+  document.querySelector(".orders .product").innerHTML = ""; // Clear order items
+  document.querySelector(".total-price").innerText = "$0"; // Reset total price
+  hidePrice.classList.add("hidden"); // Hide total price
+  price.classList.add("hidden"); // Hide price display
+  hiddenOrder.style.display = "none"; // Hide order section
 
-      nameField.value = "";
-      document.querySelector(
-        'input[placeholder="Enter your card number "]'
-      ).value = "";
-      document.querySelector('input[placeholder="Enter your CVV"]').value = "";
-    }
-  });
+  // Make the message disappear after 3 seconds (3000 milliseconds)
+  setTimeout(function () {
+    lastModel.style.display = "none";
+    lastModel.textContent = "";
+
+    // Reset the form
+    document.getElementById("name").value = "";
+    document.getElementById("cardNumber").value = "";
+    document.getElementById("cvv").value = "";
+  }, 3000);
+});
 
 let totalPrice = 0;
 
@@ -85,11 +94,11 @@ function removeFromOrder(productName, productPrice) {
 function resetOrder() {
   // Clear all data and reset functionality
   totalPrice = 0;
-  document.querySelector(".orders .product").innerHTML = ""; // Clear order items
-  document.querySelector(".total-price").innerText = "$0"; // Reset total price
-  hidePrice.classList.add("hidden"); // Hide total price
-  price.classList.add("hidden"); // Hide price display
-  hiddenOrder.style.display = "none"; // Hide order section
+  document.querySelector(".orders .product").innerHTML = "";
+  document.querySelector(".total-price").innerText = "$0";
+  hidePrice.classList.add("hidden");
+  price.classList.add("hidden");
+  hiddenOrder.style.display = "none";
 }
 
 Array.from(document.querySelectorAll(".icon a")).forEach((a) => {

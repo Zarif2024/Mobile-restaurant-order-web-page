@@ -97,17 +97,22 @@
       </main>
       <div class="overlay hidden"></div>
     </div>
-    <section class="form hidden">
-      <button class="btn--close-modal">&times;</button>
+    <section class="form hidden" id="paymentForm">
+      <button class="btn--close-modal">×</button>
       <h2 class="card">Enter card details</h2>
-      <input type="text" placeholder="Enter your name" required />
+      <input type="text" id="name" placeholder="Enter your name" required />
       <br />
-      <input type="text" placeholder="Enter your card number " required />
+      <input
+        type="text"
+        id="cardNumber"
+        placeholder="Enter your card number "
+        required />
       <br />
-      <input type="text" placeholder="Enter your CVV" required />
-      <button class="order_button submit">Pay</button>
-
-      <script src="script.js"></script>
+      <input type="text" id="cvv" placeholder="Enter your CVV" required />
+      <button class="order_button submit" id="payButton">Pay</button>
     </section>
+    <section class="last-model" id="lastModel"></section>
+
+    <script src="script.js"></script>
   </body>
 </html>

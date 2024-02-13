@@ -71,8 +71,7 @@ body {
 a {
   text-decoration: none;
   font-size: 4rem;
-  border-radius: 100%;
-  padding: 1rem;
+
   color: #8b8b8b;
 }
 a:hover {
@@ -164,4 +163,13 @@ input {
   cursor: pointer;
   border: none;
   background: none;
+}
+.last-model {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  padding: 2rem 0;
+  color: #16db99;
+  font-size: 2rem;
 }
